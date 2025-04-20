@@ -1,7 +1,15 @@
-
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import webcams from '../data/webcams.json';
+import L from 'leaflet';
+
+// Fix leaflet icons not displaying
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+  iconRetinaUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon-2x.png',
+  iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+  shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+});
 
 export default function WebcamMap() {
   return (
@@ -14,15 +22,14 @@ export default function WebcamMap() {
         {webcams.map((cam) => (
           <Marker key={cam.id} position={[cam.latitude, cam.longitude]}>
             <Popup>
-              <h2 className="font-bold">{cam.title}</h2>
-              <iframe
+              <h2 className="font-bold mb-2">{cam.title}</h2>
+              <img
                 src={cam.streamUrl}
-                width="280"
-                height="157"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-                title={cam.title}
-              ></iframe>
+                alt={cam.title}
+                width="320"
+                height="180"
+                className="rounded"
+              />
             </Popup>
           </Marker>
         ))}

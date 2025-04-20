@@ -1,21 +1,29 @@
-
 [
   {
-    "id": "aberdeen-union",
-    "title": "Aberdeen - Union Street",
+    "id": "aberdeen-union-street",
+    "title": "Union Street - Aberdeen",
     "latitude": 57.1475,
     "longitude": -2.0962,
-    "streamUrl": "https://www.youtube.com/embed/live_stream?channel=UCgVYJjTG7gqqZWZzDWWzrbA",
-    "location": "Aberdeen, Scotland",
-    "category": "City"
+    "streamUrl": "https://images.webcams.travel/webcam/1671411607.jpg",
+    "location": "Union Street, Aberdeen",
+    "category": "Street"
+  },
+  {
+    "id": "aberdeen-castlegate",
+    "title": "Castlegate Square",
+    "latitude": 57.1488,
+    "longitude": -2.0935,
+    "streamUrl": "https://images.webcams.travel/webcam/1671411678.jpg",
+    "location": "Castlegate, Aberdeen",
+    "category": "Historic"
   },
   {
     "id": "aberdeen-beach",
     "title": "Aberdeen Beach",
     "latitude": 57.1534,
     "longitude": -2.0710,
-    "streamUrl": "https://www.youtube.com/embed/live_stream?channel=UCI2aZoG3pWizIUXSK8h_bxw",
-    "location": "Aberdeen, Scotland",
+    "streamUrl": "https://images.webcams.travel/webcam/1671411820.jpg",
+    "location": "Aberdeen Beach, Aberdeen",
     "category": "Coast"
   }
 ]
