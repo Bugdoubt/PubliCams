@@ -34,5 +34,14 @@
     "streamUrl": "https://online.aberdeencity.gov.uk/services/Webcam/images/marischalsquare.jpg?dummy=1339681014",
     "location": "Broad Street, Aberdeen",
     "category": "Civic"
+  },
+  {
+    "id": "stonehaven-harbour",
+    "title": "Stonehaven Harbour",
+    "latitude": 56.9631,
+    "longitude": -2.2095,
+    "streamUrl": "https://player.twitch.tv/?channel=stonehaven_harbour&parent=publi-cams.vercel.app",
+    "location": "Stonehaven, Scotland",
+    "category": "Harbour"
   }
 ]
