@@ -11,29 +11,25 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
 });
 
-export default function WebcamMap() {
+export default function WebcamMap({ onSelectCam }) {
   return (
-    <div className="h-[80vh] rounded-xl overflow-hidden">
-      <MapContainer center={[57.1497, -2.0943]} zoom={13} scrollWheelZoom={true} className="h-full w-full z-10">
-        <TileLayer
-          attribution='&copy; OpenStreetMap contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        {webcams.map((cam) => (
-          <Marker key={cam.id} position={[cam.latitude, cam.longitude]}>
-            <Popup>
-              <h2 className="font-bold mb-2">{cam.title}</h2>
-              <img
-                src={cam.streamUrl}
-                alt={cam.title}
-                width="320"
-                height="180"
-                className="rounded"
-              />
-            </Popup>
-          </Marker>
-        ))}
-      </MapContainer>
-    </div>
+    <MapContainer center={[57.1497, -2.0943]} zoom={13} scrollWheelZoom={true} className="h-full w-full z-10">
+      <TileLayer
+        attribution='&copy; OpenStreetMap contributors'
+        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      />
+      {webcams.map((cam) => (
+        <Marker key={cam.id} position={[cam.latitude, cam.longitude]} eventHandlers={{
+          click: () => {
+            onSelectCam(cam);
+          }
+        }}>
+          <Popup>
+            <h2 className="font-bold mb-1">{cam.title}</h2>
+            <p className="text-xs">{cam.location}</p>
+          </Popup>
+        </Marker>
+      ))}
+    </MapContainer>
   );
 }
