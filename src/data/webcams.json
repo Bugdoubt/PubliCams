@@ -1,0 +1,21 @@
+
+[
+  {
+    "id": "aberdeen-union",
+    "title": "Aberdeen - Union Street",
+    "latitude": 57.1475,
+    "longitude": -2.0962,
+    "streamUrl": "https://www.youtube.com/embed/live_stream?channel=UCgVYJjTG7gqqZWZzDWWzrbA",
+    "location": "Aberdeen, Scotland",
+    "category": "City"
+  },
+  {
+    "id": "aberdeen-beach",
+    "title": "Aberdeen Beach",
+    "latitude": 57.1534,
+    "longitude": -2.0710,
+    "streamUrl": "https://www.youtube.com/embed/live_stream?channel=UCI2aZoG3pWizIUXSK8h_bxw",
+    "location": "Aberdeen, Scotland",
+    "category": "Coast"
+  }
+]
