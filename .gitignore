@@ -1,0 +1,6 @@
+# prevent sensitive or environment-specific files from being tracked
+.env
+node_modules/
+dist/
+.vscode/
+.DS_Store
